@@ -122,8 +122,8 @@ if __name__ == "__main__":
     list_dfs = list(filter(lambda item: item is not None, list_dfs))
 
     # Train test inf splitting
-    train = list_dfs[:2]
-    test = list_dfs[-1]
+    train = list_dfs[:-1]
+    test = list_dfs[-1:]
 
     download_end = timer()
     print(f"Downloading ticker data took: {round(download_end - download_start, 2)} s")
